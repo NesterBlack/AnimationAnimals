@@ -58,7 +58,7 @@ class Animal:
         return balls
 
 
-    def move_animal(self, go_to, speed):
+        def move_animal(self, go_to, speed):
         direction = self.body[0].pos - pygame.Vector2(go_to)
         self.body[0].angle = math.degrees(math.atan2(direction.y, direction.x))
         distance = direction.length()
@@ -95,6 +95,24 @@ class Animal:
                     ball.backward_point_pos = ball.pos - direction * ball.radius
                     ball.left_backward_point_pos = ball.pos + left_d * ball.radius
                     ball.right_backward_point_pos = ball.pos + right_d * ball.radius
+
+                if index >= 2:
+                    Blast_ball_pos = self.body[index].pos
+                    Alast_last_ball_pos = self.body[index-1].pos
+                    Cball_pos = ball.pos
+
+                    BA = Alast_last_ball_pos - Blast_ball_pos
+                    BC = Cball_pos - Blast_ball_pos
+
+                    angle = BA.angle_to(BC)
+
+                    max_angle = 160
+                    if abs(angle) < max_angle:
+                        angle_difference = max_angle - angle
+                        if angle < 0:
+                            angle_difference = -max_angle - angle
+                        BC = BC.rotate(angle_difference)
+                        ball.pos = self.body[index].pos + BC
 
     def draw_animal(self, surface: pygame.Surface):
         pygame.draw.circle(surface, self.color, self.body[0].pos, self.body[0].radius)
@@ -178,5 +196,6 @@ class Animal:
         y = self.body[0].pos.y-self.body[0].radius
         rect = pygame.Rect(x, y, self.body[0].radius*2, self.body[0].radius*2)
         return rect
+
 
 
