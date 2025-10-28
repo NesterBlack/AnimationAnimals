@@ -57,7 +57,7 @@ class Animal:
             balls[-1].pos.x = i*max(size)
         return balls
 
-
+    
     def move_animal(self, go_to, speed):
         direction = self.body[0].pos - pygame.Vector2(go_to)
         self.body[0].angle = math.degrees(math.atan2(direction.y, direction.x))
@@ -196,5 +196,6 @@ class Animal:
         y = self.body[0].pos.y-self.body[0].radius
         rect = pygame.Rect(x, y, self.body[0].radius*2, self.body[0].radius*2)
         return rect
+
 
 
