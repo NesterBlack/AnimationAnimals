@@ -22,7 +22,7 @@ if __name__ == "__main__":
             if event.type == pygame.QUIT:
                 running = False
         screen.fill((0, 0, 0))
-        animal.move_animal(pygame.mouse.get_pos(), 10)
+        animal.move_animal(pygame.mouse.get_pos(), 0.1)
         animal.draw_animal(screen)
 
         pygame.display.flip()
