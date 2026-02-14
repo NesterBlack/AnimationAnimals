@@ -136,10 +136,10 @@ class Animal:
         animal_rect = pygame.draw.polygon(surface, self.color, points, 0)
 
         # eyes
-        pygame.draw.circle(surface, (255, 255, 255), self.body[0].left_forward_point_pos, 10*self.size_factor)
-        pygame.draw.circle(surface, (255, 255, 255), self.body[0].right_forward_point_pos, 10*self.size_factor)
-        pygame.draw.circle(surface, (0, 0, 0), self.body[0].left_forward_point_pos, 4*self.size_factor)
-        pygame.draw.circle(surface, (0, 0, 0), self.body[0].right_forward_point_pos, 4*self.size_factor)
+        pygame.draw.circle(self.surface, (255, 255, 255), self._body[0].left_forward_point_pos, 10 * self.size_factor)
+        pygame.draw.circle(self.surface, (255, 255, 255), self._body[0].right_forward_point_pos, 10 * self.size_factor)
+        pygame.draw.circle(self.surface, (0, 0, 0), self._body[0].left_forward_point_pos, 4 * self.size_factor)
+        pygame.draw.circle(self.surface, (0, 0, 0), self._body[0].right_forward_point_pos, 4 * self.size_factor)
 
         if self.animal_name == "robocode":
             direction = (pygame.Vector2(self._body[-1].left_backward_point_pos) - self._body[-1].pos) * self.size_factor
