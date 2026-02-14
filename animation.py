@@ -165,13 +165,13 @@ class Animal:
             posY = direction.y + self.body[0].right_point_pos[1]
             pygame.draw.line(surface, self.color, self.body[0].pos, (posX, posY), 10)
 
-            font = pygame.font.SysFont("Arial", int(40*self.size_factor))
-            text = "ROBOCODE"[::-1]
-            for index, ball in enumerate(self.body[1:-1]):
-                word = font.render(text[index], True, (0,0,0))
-                rotated_word = pygame.transform.rotate(word, -ball.angle)
-                rotated_rect = rotated_word.get_rect(center=(ball.pos.x, ball.pos.y))
-                self.surface.blit(rotated_word, rotated_rect)
+            # font = pygame.font.SysFont("Arial", int(40*self.size_factor))
+            # text = "ROBOCODE"[::-1]
+            # for index, ball in enumerate(self._body[1:-1]):
+            #     word = font.render(text[index], True, (0,0,0))
+            #     rotated_word = pygame.transform.rotate(word, -ball.angle)
+            #     rotated_rect = rotated_word.get_rect(center=(ball.pos.x, ball.pos.y))
+            #     self.surface.blit(rotated_word, rotated_rect)
 
 
 
