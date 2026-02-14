@@ -43,7 +43,7 @@ class Animal:
         self.size_factor = size_factor
         self.color = color
         self.debug = debug
-        self.body = self._create_animal(self.animal_name, self.size_factor)
+        self._body = self._create_animal(self.animal_name, self.size_factor)
 
     # TODO: extract form class
     def _create_animal(self, animal="slug", size_factor=1) -> [BodyBall]:
