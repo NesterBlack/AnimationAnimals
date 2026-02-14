@@ -133,7 +133,7 @@ class Animal:
             points = list(fixed.exterior.coords)
         except AttributeError or TypeError:
             pass
-        animal_rect = pygame.draw.polygon(surface, self.color, points, 0)
+        animal_rect = pygame.draw.polygon(self.surface, self.color, points, 0)
 
         # eyes
         pygame.draw.circle(self.surface, (255, 255, 255), self._body[0].left_forward_point_pos, 10 * self.size_factor)
