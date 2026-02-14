@@ -37,7 +37,7 @@ class BodyBall:
 
 
 class Animal:
-    def __init__(self, surface: pygame.Surface, animal_name: str="slug", size_factor: float=1.0, color: tuple=(79, 227, 134), debug: bool=False):
+    def __init__(self, surface: pygame.Surface, size_factor: float=1.0, color: tuple=(79, 227, 134), debug: bool=False):
         self.surface = surface
         self.animal_name = animal_name
         self.size_factor = size_factor
