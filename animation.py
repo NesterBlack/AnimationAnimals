@@ -99,8 +99,8 @@ class Animal:
                     ball.right_backward_point_pos = ball.pos + right_d * ball.radius
 
                 if index >= 2:
-                    Blast_ball_pos = self.body[index].pos
-                    Alast_last_ball_pos = self.body[index-1].pos
+                    Blast_ball_pos = self._body[index].pos
+                    Alast_last_ball_pos = self._body[index - 1].pos
                     Cball_pos = ball.pos
 
                     BA = Alast_last_ball_pos - Blast_ball_pos
