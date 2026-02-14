@@ -70,9 +70,9 @@ class Animal:
 
             right_d = direction.rotate(90)
             left_d = direction.rotate(-90)
-            self.body[0].left_point_pos = self.body[0].pos + left_d * self.body[0].radius
-            self.body[0].right_point_pos = self.body[0].pos + right_d * self.body[0].radius
-            self.body[0].forward_point_pos = self.body[0].pos - direction * self.body[0].radius
+            self._body[0].left_point_pos = self._body[0].pos + left_d * self._body[0].radius
+            self._body[0].right_point_pos = self._body[0].pos + right_d * self._body[0].radius
+            self._body[0].forward_point_pos = self._body[0].pos - direction * self._body[0].radius
 
             left_forward_d = direction.rotate(135)
             right_forward_d = direction.rotate(-135)
