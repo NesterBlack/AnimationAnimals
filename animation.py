@@ -161,9 +161,9 @@ class Animal:
 
             direction = (self.body[0].right_point_pos - self.body[0].pos)*self.size_factor*1.5
             direction = direction.rotate(-45)
-            posX = direction.x + self.body[0].right_point_pos[0]
-            posY = direction.y + self.body[0].right_point_pos[1]
-            pygame.draw.line(surface, self.color, self.body[0].pos, (posX, posY), 10)
+            posX = direction.x + self._body[0].right_point_pos[0]
+            posY = direction.y + self._body[0].right_point_pos[1]
+            pygame.draw.line(self.surface, self.color, self._body[0].pos, (posX, posY), 10)
 
             # font = pygame.font.SysFont("Arial", int(40*self.size_factor))
             # text = "ROBOCODE"[::-1]
