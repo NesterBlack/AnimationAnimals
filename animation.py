@@ -153,7 +153,7 @@ class Animal:
             pygame.draw.line(surface, self.color, self.body[-1].pos, (posX, posY), 10)
 
 
-            direction = (self.body[0].left_point_pos - self.body[0].pos)*self.size_factor*1.5
+            direction = (self._body[0].left_point_pos - self._body[0].pos) * self.size_factor * 1.5
             direction = direction.rotate(45)
             posX = direction.x + self._body[0].left_point_pos[0]
             posY = direction.y + self._body[0].left_point_pos[1]
