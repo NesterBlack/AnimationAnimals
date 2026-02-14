@@ -66,7 +66,7 @@ class Animal:
         distance = direction.length()
         if distance != 0:
             direction = direction.normalize()
-            self.body[0].pos = self.body[0].pos - direction * (distance * speed)
+            self._body[0].pos = self._body[0].pos - direction * (distance * speed)
 
             right_d = direction.rotate(90)
             left_d = direction.rotate(-90)
