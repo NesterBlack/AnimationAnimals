@@ -199,6 +199,12 @@ class Animal:
         rect = pygame.Rect(x, y, self._body[0].radius * 2, self._body[0].radius * 2)
         return rect
 
-
-
+class Slug(Animal):
+    def __init__(self, surface: pygame.Surface, size_factor: float = 1.0, color: tuple = (79, 227, 134), debug: bool = False):
+        self.surface = surface
+        self.animal_name = "slug"
+        self.size_factor = size_factor
+        self.color = color
+        self.debug = debug
+        self._body = self._create_animal(self.animal_name, self.size_factor)
 
