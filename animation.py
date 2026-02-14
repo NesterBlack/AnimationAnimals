@@ -142,10 +142,10 @@ class Animal:
         pygame.draw.circle(surface, (0, 0, 0), self.body[0].right_forward_point_pos, 4*self.size_factor)
 
         if self.animal_name == "robocode":
-            direction = (pygame.Vector2(self.body[-1].left_backward_point_pos) - self.body[-1].pos)*self.size_factor
-            posX = direction.x + self.body[-1].left_backward_point_pos[0]
-            posY = direction.y + self.body[-1].left_backward_point_pos[1]
-            pygame.draw.line(surface, self.color, self.body[-1].pos, (posX, posY), 10)
+            direction = (pygame.Vector2(self._body[-1].left_backward_point_pos) - self._body[-1].pos) * self.size_factor
+            posX = direction.x + self._body[-1].left_backward_point_pos[0]
+            posY = direction.y + self._body[-1].left_backward_point_pos[1]
+            pygame.draw.line(self.surface, self.color, self._body[-1].pos, (posX, posY), 10)
 
             direction = (pygame.Vector2(self._body[-1].right_backward_point_pos) - self._body[-1].pos) * self.size_factor * 1.5
             posX = direction.x + self._body[-1].right_backward_point_pos[0]
