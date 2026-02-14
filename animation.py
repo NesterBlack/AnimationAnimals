@@ -194,9 +194,9 @@ class Animal:
 
 
     def rect(self):
-        x = self.body[0].pos.x-self.body[0].radius
-        y = self.body[0].pos.y-self.body[0].radius
-        rect = pygame.Rect(x, y, self.body[0].radius*2, self.body[0].radius*2)
+        x = self._body[0].pos.x - self._body[0].radius
+        y = self._body[0].pos.y - self._body[0].radius
+        rect = pygame.Rect(x, y, self._body[0].radius * 2, self._body[0].radius * 2)
         return rect
 
 
