@@ -126,7 +126,7 @@ class Animal:
         points.append(self.body[-1].left_backward_point_pos)
         for ball in self.body[::-1]:
             points.append(ball.right_point_pos)
-        points.append(self.body[0].right_forward_point_pos)
+        points.append(self._body[0].right_forward_point_pos)
         poly = Polygon(points)
         fixed = poly.buffer(0)
         try:
