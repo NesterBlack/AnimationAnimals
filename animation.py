@@ -76,10 +76,10 @@ class Animal:
 
             left_forward_d = direction.rotate(135)
             right_forward_d = direction.rotate(-135)
-            self.body[0].left_forward_point_pos = self.body[0].pos + left_forward_d * self.body[0].radius
-            self.body[0].right_forward_point_pos = self.body[0].pos + right_forward_d * self.body[0].radius
-        for index, ball in enumerate(self.body[1:]):
-            prev = pygame.Vector2(self.body[index].pos)
+            self._body[0].left_forward_point_pos = self._body[0].pos + left_forward_d * self._body[0].radius
+            self._body[0].right_forward_point_pos = self._body[0].pos + right_forward_d * self._body[0].radius
+        for index, ball in enumerate(self._body[1:]):
+            prev = pygame.Vector2(self._body[index].pos)
             curr = pygame.Vector2(ball.pos)
             direction = prev - curr
             distance = direction.length()
