@@ -61,8 +61,8 @@ class Animal:
 
     
     def move_animal(self, go_to, speed):
-        direction = self.body[0].pos - pygame.Vector2(go_to)
-        self.body[0].angle = math.degrees(math.atan2(direction.y, direction.x))
+        direction = self._body[0].pos - pygame.Vector2(go_to)
+        self._body[0].angle = math.degrees(math.atan2(direction.y, direction.x))
         distance = direction.length()
         if distance != 0:
             direction = direction.normalize()
