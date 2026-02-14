@@ -116,10 +116,10 @@ class Animal:
                         BC = BC.rotate(angle_difference)
                         ball.pos = self.body[index].pos + BC
 
-    def draw_animal(self, surface: pygame.Surface):
-        pygame.draw.circle(surface, self.color, self.body[0].pos, self.body[0].radius)
-        points = [self.body[0].forward_point_pos, self.body[0].left_forward_point_pos]
-        for ball in self.body:
+    def draw_animal(self):
+        pygame.draw.circle(self.surface, self.color, self._body[0].pos, self._body[0].radius)
+        points = [self._body[0].forward_point_pos, self._body[0].left_forward_point_pos]
+        for ball in self._body:
             points.append(ball.left_point_pos)
         points.append(self._body[-1].right_backward_point_pos)
         points.append(self._body[-1].backward_point_pos)
