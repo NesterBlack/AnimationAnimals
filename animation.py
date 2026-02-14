@@ -114,7 +114,7 @@ class Animal:
                         if angle < 0:
                             angle_difference = -max_angle - angle
                         BC = BC.rotate(angle_difference)
-                        ball.pos = self.body[index].pos + BC
+                        ball.pos = self._body[index].pos + BC
 
     def draw_animal(self):
         pygame.draw.circle(self.surface, self.color, self._body[0].pos, self._body[0].radius)
