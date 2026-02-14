@@ -187,7 +187,7 @@ class Animal:
             pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.midright, 5)
             pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.midtop, 5)
 
-            for ball in self.body:
+            for ball in self._body:
                 ball.draw()
             pygame.draw.rect(self.surface, (100, 255, 100), self.rect(), 5)
 
