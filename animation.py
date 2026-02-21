@@ -76,7 +76,7 @@ class Animal:
             prev = pygame.Vector2(self._body[index].pos)
             curr = pygame.Vector2(ball.pos)
             direction = prev - curr
-            distance = direction.length()
+            distance = np.linalg.norm(direction)
             if distance != 0:
                 direction = direction / distance
                 ball.angle = math.degrees(math.atan2(direction[1], direction[0]))
