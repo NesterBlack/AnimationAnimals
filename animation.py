@@ -2,17 +2,6 @@ import pygame
 import math
 from shapely.geometry import Polygon
 
-def subtract_tuples(*args) -> tuple():
-    lens_tuples = {}
-    len_tuple = 0
-    for tup in args:
-        if lens_tuples.get(len(tup)):
-            lens_tuples[len(tup)] += 1
-        else:
-            lens_tuples[len(tup)] = 1
-        len_tuple = len(tup)
-    if len(lens_tuples) > 1:
-        raise Exception("tuples have different lengths")
 
     result = list(args[0])
     for tup in args[1:]:
