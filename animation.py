@@ -94,23 +94,6 @@ class Animal:
                     ball.left_backward_point_pos = ball.pos + left_d * ball.radius
                     ball.right_backward_point_pos = ball.pos + right_d * ball.radius
 
-                if index >= 2:
-                    Blast_ball_pos = self._body[index].pos
-                    Alast_last_ball_pos = self._body[index - 1].pos
-                    Cball_pos = ball.pos
-
-                    BA = Alast_last_ball_pos - Blast_ball_pos
-                    BC = Cball_pos - Blast_ball_pos
-
-                    angle = BA.angle_to(BC)
-
-                    max_angle = 160
-                    if abs(angle) < max_angle:
-                        angle_difference = max_angle - angle
-                        if angle < 0:
-                            angle_difference = -max_angle - angle
-                        BC = BC.rotate(angle_difference)
-                        ball.pos = self._body[index].pos + BC
 
     def draw_animal(self):
         pygame.draw.circle(self.surface, self.color, self._body[0].pos, self._body[0].radius)
