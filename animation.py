@@ -59,7 +59,7 @@ class Animal:
         self._body[0].angle = math.degrees(math.atan2(direction.y, direction.x))
         distance = direction.length()
         if distance != 0:
-            direction = direction.normalize()
+            direction = direction / distance
             self._body[0].pos = self._body[0].pos - direction * (distance * speed)
 
             right_d = rotation_vector2(direction, 90)
