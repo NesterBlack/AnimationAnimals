@@ -85,8 +85,8 @@ class Animal:
                 ball.right_point_pos = ball.pos + pygame.Vector2(direction.y, -direction.x) * ball.radius
 
                 if index == len(self._body) - 2:
-                    left_d = direction.rotate(-135)
-                    right_d = direction.rotate(135)
+                    left_d = rotation_vector2(direction, -135)
+                    right_d = rotation_vector2(direction, 135)
 
                     ball.backward_point_pos = ball.pos - direction * ball.radius
                     ball.left_backward_point_pos = ball.pos + left_d * ball.radius
