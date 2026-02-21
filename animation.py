@@ -62,8 +62,8 @@ class Animal:
             direction = direction.normalize()
             self._body[0].pos = self._body[0].pos - direction * (distance * speed)
 
-            right_d = direction.rotate(90)
-            left_d = direction.rotate(-90)
+            right_d = rotation_vector2(direction, 90)
+            left_d = rotation_vector2(direction, -90)
             self._body[0].left_point_pos = self._body[0].pos + left_d * self._body[0].radius
             self._body[0].right_point_pos = self._body[0].pos + right_d * self._body[0].radius
             self._body[0].forward_point_pos = self._body[0].pos - direction * self._body[0].radius
