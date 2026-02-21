@@ -81,8 +81,8 @@ class Animal:
                 direction = direction.normalize()
                 ball.angle = math.degrees(math.atan2(direction.y, direction.x))
                 ball.pos = prev - direction * ball.radius
-                ball.left_point_pos = ball.pos + pygame.Vector2(-direction.y, direction.x) * ball.radius
-                ball.right_point_pos = ball.pos + pygame.Vector2(direction.y, -direction.x) * ball.radius
+                ball.left_point_pos = ball.pos + rotation_vector2(direction, 90) * ball.radius
+                ball.right_point_pos = ball.pos + rotation_vector2(direction, -90) * ball.radius
 
                 if index == len(self._body) - 2:
                     left_d = rotation_vector2(direction, -135)
