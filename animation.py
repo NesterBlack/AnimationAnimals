@@ -3,11 +3,6 @@ import math
 from shapely.geometry import Polygon
 
 
-    result = list(args[0])
-    for tup in args[1:]:
-        for index in range(len_tuple):
-            result[index] -= tup[index]
-    return tuple(result)
 
 class BodyBall:
     def __init__(self, surface, radius):
