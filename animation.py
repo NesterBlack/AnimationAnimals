@@ -78,8 +78,8 @@ class Animal:
             direction = prev - curr
             distance = direction.length()
             if distance != 0:
-                direction = direction.normalize()
-                ball.angle = math.degrees(math.atan2(direction.y, direction.x))
+                direction = direction / distance
+                ball.angle = math.degrees(math.atan2(direction[1], direction[0]))
                 ball.pos = prev - direction * ball.radius
                 ball.left_point_pos = ball.pos + rotation_vector2(direction, 90) * ball.radius
                 ball.right_point_pos = ball.pos + rotation_vector2(direction, -90) * ball.radius
