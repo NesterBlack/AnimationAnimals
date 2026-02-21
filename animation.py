@@ -14,8 +14,7 @@ def rotation_vector2(vector: array, angle: float) -> array:
     return new_vector
 
 class BodyBall:
-    def __init__(self, surface, radius):
-        self.surface = surface
+    def __init__(self, radius):
         self.pos = array([0,0])
         self.angle = 0
 
