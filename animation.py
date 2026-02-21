@@ -92,6 +92,23 @@ class Animal:
                     ball.left_backward_point_pos = ball.pos + left_d * ball.radius
                     ball.right_backward_point_pos = ball.pos + right_d * ball.radius
 
+    def get_points_for_draw(self):
+        points = [self._body[0].forward_point_pos, self._body[0].left_forward_point_pos]
+        for ball in self._body:
+            points.append(ball.left_point_pos)
+        points.append(self._body[-1].right_backward_point_pos)
+        points.append(self._body[-1].backward_point_pos)
+        points.append(self._body[-1].left_backward_point_pos)
+        for ball in self._body[::-1]:
+            points.append(ball.right_point_pos)
+        points.append(self._body[0].right_forward_point_pos)
+        poly = Polygon(points)
+        fixed = poly.buffer(0)
+        try:
+            points = list(fixed.exterior.coords)
+        except AttributeError or TypeError:
+            pass
+        return (points, [self._body[0].left_forward_point_pos, self._body[0].right_forward_point_pos])
 
 
 class Slug(Animal):
