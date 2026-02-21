@@ -93,9 +93,6 @@ class Animal:
                     ball.right_backward_point_pos = ball.pos + right_d * ball.radius
 
 
-    
-
-
 
     def rect(self):
         x = self._body[0].pos.x - self._body[0].radius
