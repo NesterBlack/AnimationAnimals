@@ -38,8 +38,6 @@ class Animal:
     def __init__(self, size_factor: float=1.0, color: tuple=(79, 227, 134), debug: bool=False):
         self.animal_name = "animal name"
         self.size_factor = size_factor
-        self.color = color
-        self.debug = debug
         self._body = self._create_animal(self.animal_name, self.size_factor)
 
     # TODO: extract form class
