@@ -50,7 +50,7 @@ class Animal:
         for i in range(len(size)):
             balls.append(BodyBall(size[i]))
             balls[-1].pos[0] = i*max(size)
-            balls[-1].pos[1] = self.surface.get_height()//2
+            balls[-1].pos[1] = 0
 
         return balls
 
