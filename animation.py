@@ -152,21 +152,7 @@ class Animal:
 
 
 
-        # size rect
-        if self.debug:
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.center, 5)
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.bottomleft, 5)
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.bottomright, 5)
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.topleft, 5)
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.topright, 5)
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.midbottom, 5)
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.midleft, 5)
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.midright, 5)
-            pygame.draw.circle(self.surface, (255, 0, 0), animal_rect.midtop, 5)
-
-            for ball in self._body:
-                ball.draw()
-            pygame.draw.rect(self.surface, (100, 255, 100), self.rect(), 5)
+        
 
 
 
