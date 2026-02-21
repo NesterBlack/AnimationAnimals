@@ -23,18 +23,6 @@ class BodyBall:
 
         self.radius = radius
 
-    def draw(self):
-        pygame.draw.circle(self.surface, (100, 100, 100), (self.pos[0], self.pos[1]), self.radius, 5)
-        pygame.draw.circle(self.surface, (0, 100, 0), self.left_point_pos, 5)
-        pygame.draw.circle(self.surface, (100, 0, 0), self.right_point_pos, 5)
-        if self.forward_point_pos:
-            pygame.draw.circle(self.surface, (0, 0, 100), self.forward_point_pos, 5)
-            pygame.draw.circle(self.surface, (100, 0, 100), self.left_forward_point_pos, 5)
-            pygame.draw.circle(self.surface, (0, 100, 100), self.right_forward_point_pos, 5)
-        if self.backward_point_pos:
-            pygame.draw.circle(self.surface, (0, 0, 100), self.backward_point_pos, 5)
-            pygame.draw.circle(self.surface, (100, 0, 100), self.left_backward_point_pos, 5)
-            pygame.draw.circle(self.surface, (0, 100, 100), self.right_backward_point_pos, 5)
 
 
 
