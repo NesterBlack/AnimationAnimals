@@ -3,7 +3,8 @@ import math
 from shapely.geometry import Polygon
 
 def rotation_vector2(vector: array, angle: float) -> array:
-    new_vector = array([0,0])
+    rad_angle = radians(angle)
+    new_vector = array([0,0], dtype=float)
 
     new_vector[0] = vector[0] * math.cos(rad_angle) - vector[1] * math.sin(rad_angle)
     new_vector[1] = vector[0] * math.sin(rad_angle) + vector[1] * math.cos(rad_angle)
