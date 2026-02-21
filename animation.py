@@ -68,8 +68,8 @@ class Animal:
             self._body[0].right_point_pos = self._body[0].pos + right_d * self._body[0].radius
             self._body[0].forward_point_pos = self._body[0].pos - direction * self._body[0].radius
 
-            left_forward_d = direction.rotate(135)
-            right_forward_d = direction.rotate(-135)
+            left_forward_d = rotation_vector2(direction, -135)
+            right_forward_d = rotation_vector2(direction, 135)
             self._body[0].left_forward_point_pos = self._body[0].pos + left_forward_d * self._body[0].radius
             self._body[0].right_forward_point_pos = self._body[0].pos + right_forward_d * self._body[0].radius
         for index, ball in enumerate(self._body[1:]):
