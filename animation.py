@@ -2,7 +2,13 @@ import pygame
 import math
 from shapely.geometry import Polygon
 
+def rotation_vector2(vector: array, angle: float) -> array:
+    new_vector = array([0,0])
 
+    new_vector[0] = vector[0] * math.cos(angle) - vector[1] * math.sin(angle)
+    new_vector[1] = vector[0] * math.sin(angle) + vector[1] * math.cos(angle)
+
+    return new_vector
 
 class BodyBall:
     def __init__(self, surface, radius):
