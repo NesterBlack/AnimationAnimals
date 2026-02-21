@@ -112,8 +112,7 @@ class Animal:
 
 
 class Slug(Animal):
-    def __init__(self, surface: pygame.Surface, size_factor: float = 1.0, color: tuple = (79, 227, 134), debug: bool = False):
-        self.surface = surface
+    def __init__(self, size_factor: float = 1.0, color: tuple = (79, 227, 134), debug: bool = False):
         self.animal_name = "slug"
         self.size_factor = size_factor
         self.color = color
