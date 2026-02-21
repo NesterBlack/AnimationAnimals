@@ -152,10 +152,6 @@ class Animal:
 
 
 
-        
-
-
-
     def rect(self):
         x = self._body[0].pos.x - self._body[0].radius
         y = self._body[0].pos.y - self._body[0].radius
