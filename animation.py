@@ -1,4 +1,3 @@
-import pygame
 import math
 from math import radians
 import numpy as np
