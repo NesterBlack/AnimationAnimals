@@ -48,8 +48,8 @@ class Animal:
             size = [x * size_factor for x in [34, 42, 43, 42, 41, 38, 32, 30, 25, 19, 17, 16, 9, 7]]
         for i in range(len(size)):
             balls.append(BodyBall(self.surface, size[i]))
-            balls[-1].pos.x = i*max(size)
-            balls[-1].pos.y = self.surface.get_height()//2
+            balls[-1].pos[0] = i*max(size)
+            balls[-1].pos[1] = self.surface.get_height()//2
 
         return balls
 
