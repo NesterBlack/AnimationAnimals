@@ -93,62 +93,7 @@ class Animal:
                     ball.right_backward_point_pos = ball.pos + right_d * ball.radius
 
 
-    def draw_animal(self):
-        pygame.draw.circle(self.surface, self.color, self._body[0].pos, self._body[0].radius)
-        points = [self._body[0].forward_point_pos, self._body[0].left_forward_point_pos]
-        for ball in self._body:
-            points.append(ball.left_point_pos)
-        points.append(self._body[-1].right_backward_point_pos)
-        points.append(self._body[-1].backward_point_pos)
-        points.append(self._body[-1].left_backward_point_pos)
-        for ball in self._body[::-1]:
-            points.append(ball.right_point_pos)
-        points.append(self._body[0].right_forward_point_pos)
-        poly = Polygon(points)
-        fixed = poly.buffer(0)
-        try:
-            points = list(fixed.exterior.coords)
-        except AttributeError or TypeError:
-            pass
-        animal_rect = pygame.draw.polygon(self.surface, self.color, points, 0)
-
-        # eyes
-        pygame.draw.circle(self.surface, (255, 255, 255), self._body[0].left_forward_point_pos, 10 * self.size_factor)
-        pygame.draw.circle(self.surface, (255, 255, 255), self._body[0].right_forward_point_pos, 10 * self.size_factor)
-        pygame.draw.circle(self.surface, (0, 0, 0), self._body[0].left_forward_point_pos, 4 * self.size_factor)
-        pygame.draw.circle(self.surface, (0, 0, 0), self._body[0].right_forward_point_pos, 4 * self.size_factor)
-
-        # if self.animal_name == "robocode":
-        #     direction = (pygame.Vector2(self._body[-1].left_backward_point_pos) - self._body[-1].pos) * self.size_factor
-        #     posX = direction.x + self._body[-1].left_backward_point_pos[0]
-        #     posY = direction.y + self._body[-1].left_backward_point_pos[1]
-        #     pygame.draw.line(self.surface, self.color, self._body[-1].pos, (posX, posY), 10)
-        #
-        #     direction = (pygame.Vector2(self._body[-1].right_backward_point_pos) - self._body[-1].pos) * self.size_factor * 1.5
-        #     posX = direction.x + self._body[-1].right_backward_point_pos[0]
-        #     posY = direction.y + self._body[-1].right_backward_point_pos[1]
-        #     pygame.draw.line(self.surface, self.color, self._body[-1].pos, (posX, posY), 10)
-        #
-        #
-        #     direction = (self._body[0].left_point_pos - self._body[0].pos) * self.size_factor * 1.5
-        #     direction = direction.rotate(45)
-        #     posX = direction.x + self._body[0].left_point_pos[0]
-        #     posY = direction.y + self._body[0].left_point_pos[1]
-        #     pygame.draw.line(self.surface, self.color, self._body[0].pos, (posX, posY), 10)
-        #
-        #     direction = (self._body[0].right_point_pos - self._body[0].pos) * self.size_factor * 1.5
-        #     direction = direction.rotate(-45)
-        #     posX = direction.x + self._body[0].right_point_pos[0]
-        #     posY = direction.y + self._body[0].right_point_pos[1]
-        #     pygame.draw.line(self.surface, self.color, self._body[0].pos, (posX, posY), 10)
-
-            # font = pygame.font.SysFont("Arial", int(40*self.size_factor))
-            # text = "ROBOCODE"[::-1]
-            # for index, ball in enumerate(self._body[1:-1]):
-            #     word = font.render(text[index], True, (0,0,0))
-            #     rotated_word = pygame.transform.rotate(word, -ball.angle)
-            #     rotated_rect = rotated_word.get_rect(center=(ball.pos.x, ball.pos.y))
-            #     self.surface.blit(rotated_word, rotated_rect)
+    
 
 
 
