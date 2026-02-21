@@ -54,10 +54,10 @@ class Animal:
         return balls
 
     
-    def move_animal(self, go_to, speed):
-        direction = self._body[0].pos - pygame.Vector2(go_to)
-        self._body[0].angle = math.degrees(math.atan2(direction.y, direction.x))
-        distance = direction.length()
+    def move_animal(self, go_to: tuple, speed):
+        direction = self._body[0].pos - go_to
+        self._body[0].angle = math.degrees(math.atan2(direction[1], direction[0]))
+        distance = np.linalg.norm(direction)
         if distance != 0:
             direction = direction / distance
             self._body[0].pos = self._body[0].pos - direction * (distance * speed)
