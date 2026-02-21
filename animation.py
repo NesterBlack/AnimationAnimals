@@ -10,8 +10,8 @@ class BodyBall:
         self.pos = pygame.Vector2(0, 0)
         self.angle = 0
 
-        self.left_point_pos = pygame.Vector2()
-        self.right_point_pos = pygame.Vector2()
+        self.left_point_pos = None
+        self.right_point_pos = None
 
         self.forward_point_pos = None
         self.left_forward_point_pos = None
