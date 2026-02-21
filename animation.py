@@ -73,8 +73,8 @@ class Animal:
             self._body[0].left_forward_point_pos = self._body[0].pos + left_forward_d * self._body[0].radius
             self._body[0].right_forward_point_pos = self._body[0].pos + right_forward_d * self._body[0].radius
         for index, ball in enumerate(self._body[1:]):
-            prev = pygame.Vector2(self._body[index].pos)
-            curr = pygame.Vector2(ball.pos)
+            prev = self._body[index].pos
+            curr = ball.pos
             direction = prev - curr
             distance = np.linalg.norm(direction)
             if distance != 0:
