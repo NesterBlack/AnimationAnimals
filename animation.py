@@ -13,7 +13,7 @@ def rotation_vector2(vector: array, angle: float) -> array:
 class BodyBall:
     def __init__(self, surface, radius):
         self.surface = surface
-        self.pos = pygame.Vector2(0, 0)
+        self.pos = array([0,0])
         self.angle = 0
 
         self.left_point_pos = None
